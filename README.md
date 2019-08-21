@@ -54,6 +54,7 @@ The Alfred will automatically open the terminal and run the deploy script:
 ## Contribution
 
 This workflow is in a very early stage, any kinds of contribution are welcome! 
+
 Please feel free to open an issue if you have any questions or suggestions!
 
 
