@@ -70,6 +70,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>A82E4FFA-1925-4757-8D30-512F0B26AD0D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>143DFCBA-AB66-4943-ADCE-66472F56F52A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>B08DDE30-9D47-4102-8BEA-7A4F60330B0D</key>
 		<array>
 			<dict>
@@ -107,6 +120,29 @@
 			</dict>
 		</array>
 		<key>EA98B772-30C9-4CB5-9019-C97565E46079</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A82E4FFA-1925-4757-8D30-512F0B26AD0D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>F130B5D6-78BF-4EDF-AF2D-B9F233E11105</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F130B5D6-78BF-4EDF-AF2D-B9F233E11105</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -301,6 +337,21 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>openwith</key>
+				<string>/Applications/Typora.app</string>
+				<key>sourcefile</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>342C8366-1F89-4A6F-A70F-8B3764A1D338</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -320,21 +371,6 @@
 			<string>C3882465-A1AF-4B22-9ECE-0C24259FCDF0</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>openwith</key>
-				<string>/Applications/Typora.app</string>
-				<key>sourcefile</key>
-				<string>{query}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
-			<key>uid</key>
-			<string>342C8366-1F89-4A6F-A70F-8B3764A1D338</string>
-			<key>version</key>
-			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -434,6 +470,46 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Please specify the hugo source folder using "hugoset"</string>
+				<key>title</key>
+				<string>ERROR</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>143DFCBA-AB66-4943-ADCE-66472F56F52A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:SOURCE_FOLDER}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>A82E4FFA-1925-4757-8D30-512F0B26AD0D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>keyword</key>
@@ -458,13 +534,32 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>cd /Users/haobogu/Projects/Blog/source-haobogu.github.io
+				<string>cd {var:SOURCE_FOLDER}
 ./deploy.sh</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.terminalcommand</string>
 			<key>uid</key>
 			<string>2C022C84-0289-46AB-8AC2-AE56648F50ED</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:SOURCE_FOLDER}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>F130B5D6-78BF-4EDF-AF2D-B9F233E11105</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -593,6 +688,13 @@
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>143DFCBA-AB66-4943-ADCE-66472F56F52A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>490</integer>
+			<key>ypos</key>
+			<integer>240</integer>
+		</dict>
 		<key>24F3D666-3C03-4704-93A3-577C440CF23E</key>
 		<dict>
 			<key>xpos</key>
@@ -603,9 +705,9 @@
 		<key>2C022C84-0289-46AB-8AC2-AE56648F50ED</key>
 		<dict>
 			<key>xpos</key>
-			<integer>340</integer>
+			<integer>490</integer>
 			<key>ypos</key>
-			<integer>290</integer>
+			<integer>350</integer>
 		</dict>
 		<key>342C8366-1F89-4A6F-A70F-8B3764A1D338</key>
 		<dict>
@@ -619,7 +721,7 @@
 			<key>xpos</key>
 			<integer>800</integer>
 			<key>ypos</key>
-			<integer>420</integer>
+			<integer>480</integer>
 		</dict>
 		<key>5955775B-FB70-44DB-AB69-42F5A67E42E7</key>
 		<dict>
@@ -633,7 +735,7 @@
 			<key>xpos</key>
 			<integer>70</integer>
 			<key>ypos</key>
-			<integer>420</integer>
+			<integer>480</integer>
 		</dict>
 		<key>97443F8F-17FC-4D86-90A4-425AF093615B</key>
 		<dict>
@@ -641,6 +743,13 @@
 			<integer>250</integer>
 			<key>ypos</key>
 			<integer>40</integer>
+		</dict>
+		<key>A82E4FFA-1925-4757-8D30-512F0B26AD0D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>270</integer>
+			<key>ypos</key>
+			<integer>270</integer>
 		</dict>
 		<key>B08DDE30-9D47-4102-8BEA-7A4F60330B0D</key>
 		<dict>
@@ -670,6 +779,13 @@
 			<key>ypos</key>
 			<integer>290</integer>
 		</dict>
+		<key>F130B5D6-78BF-4EDF-AF2D-B9F233E11105</key>
+		<dict>
+			<key>xpos</key>
+			<integer>270</integer>
+			<key>ypos</key>
+			<integer>380</integer>
+		</dict>
 		<key>F2E47BA0-AE00-456A-90E9-28677F3E56E0</key>
 		<dict>
 			<key>xpos</key>
@@ -682,7 +798,7 @@
 			<key>xpos</key>
 			<integer>340</integer>
 			<key>ypos</key>
-			<integer>420</integer>
+			<integer>480</integer>
 		</dict>
 		<key>FA42B014-5F6D-463E-BE00-BD13BDB24564</key>
 		<dict>
