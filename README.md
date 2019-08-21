@@ -1,7 +1,7 @@
 # hugo-alfred-workflow
 Alfred workflow for Hugo, a static site generator. 
 
-This workflow provides shortkey for markdown document to hugo post migration, creating new hugo post and one-click deploy.
+This workflow provides shortkey for markdown document to hugo post migration, creating new hugo post and one-click deployment.
 
 ## Usage
 
