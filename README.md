@@ -19,7 +19,7 @@ If your source folder is changed, you must set it again.
 
 ### Markdown document migration
 
-If you want to migrate your markdown docs to hugo posts, use `hgtran`:
+If you want to migrate your existing markdown docs to hugo posts, use `hgtran`:
 
 ![image-20190821211256084](http://haobo-markdown.oss-cn-zhangjiakou.aliyuncs.com/markdown/2019-08-21-131256.png)
 
@@ -27,13 +27,13 @@ Then this file will be copied to `hugo-source-folder/content/posts/` and a simpl
 
 ![image-20190821211654105](http://haobo-markdown.oss-cn-zhangjiakou.aliyuncs.com/markdown/2019-08-21-131654.png)
 
-### Create new hugo post
+### Create a new hugo post
 
-You can create new hugo post using `hgnew`:
+You can create a new hugo post using `hgnew`:
 
 ![image-20190821211811136](http://haobo-markdown.oss-cn-zhangjiakou.aliyuncs.com/markdown/2019-08-21-131811.png)
 
-Note that you **CANNOT** use filenames with whitespaces.
+Note that you **CANNOT** use filenames with whitespaces here. Pleaee use `-` to replace whitespaces -- don't worry, those `-` will be replaced by whitespaces in the post title.
 
 Similarly, the created file will be opened automatically with a simple hugo front matter:
 
