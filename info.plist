@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.alfred.haobogu</string>
+	<string>com.haobogu.alfred.hugo</string>
 	<key>category</key>
 	<string>Tools</string>
 	<key>connections</key>
