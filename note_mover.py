@@ -18,9 +18,8 @@ def generate_header(file_name):
     if author is None:
         author = ""
     header = "---\n" + generate_title(file_name) + generate_author(author) + \
-             generate_tag() + generate_date() + generate_draft() + "---\n" + "\n<!--more-->\n"
+             generate_tag() + generate_date() + generate_draft() + generate_summary() + "---\n"
     return header
-
 
 def generate_title(file_name):
     title = file_name.split(".")[0]
@@ -46,6 +45,9 @@ def generate_date():
     date_str = "date: " + datetime.now(tz).isoformat() + "\n"
     return date_str
 
+def generate_summary():
+    summary_str = "summary: \n"
+    return summary_str
 
 def main(wf):
     success = False
